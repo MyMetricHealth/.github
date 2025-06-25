@@ -1,45 +1,22 @@
-> **⚠️ Heads-up:**  
-> This README was auto-generated with AI and serves as a **temporary placeholder**.  
-> Expect significant updates once our full documentation is ready.
+# 📂 `.github` (Org-Wide Meta Repository)
 
-# My Metric Health
-
-Welcome to the **My Metric Health** codebase.  
-Our mission is to help clinics, clinicians, and patients manage care more efficiently with secure, real-time data and AI-powered insights.
+> **What is this repo?**  
+> This repository holds _shared configuration_ that GitHub automatically applies to **every repository in the My Metric Health organization**.  
+> It contains no application code—just templates and automation that keep our workflows consistent.
 
 ---
 
-## ✨ Key Features
-| Area | Highlights |
-|------|------------|
-| **Mobile App** | • Symptom & assessment reminders<br>• Push notifications for assigned tasks |
-| **Web Portal** | • Multi-clinic & multi-clinician support<br>• Granular roles: Admin · Member · LimitedClinician · DataViewer<br>• De-identified analytics view |
-| **Security** | • HIPAA-oriented architecture<br>• PHI encrypted at rest & in transit |
-| **AI / Automation** | • Personalized task schedules<br>• Productivity tooling with Cursor & CI workflows |
+## ✨ What lives here?
+
+| Path | Purpose |
+|------|---------|
+| `.github/PULL_REQUEST_TEMPLATE.md` or `PULL_REQUEST_TEMPLATE/*.md` | Default pull-request description(s) that appear whenever a contributor opens a PR. |
+| `.github/ISSUE_TEMPLATE/` | Reusable issue templates—bug, feature request, tech-debt, etc. |
+| `.github/CODEOWNERS` | File-pattern → reviewer mappings; enforces automatic reviewer assignment. |
+| `.github/workflows/` | Reusable GitHub Actions workflows that any repo can call with `uses: MyMetricHealth/.github/.github/workflows/<file>@main`. |
+| `.github/README.md` (this file) | Explains why this repo exists and how to use it. |
+
+> **Note:** Any individual project repo can override these defaults by adding its own templates or workflows inside its local `.github/` folder.
 
 ---
 
-## 🛠 Tech Stack
-| Layer | Tech |
-|-------|------|
-| Frontend | React + TypeScript, Tailwind, Expo (mobile) |
-| Backend  | Node.js (Express), PostgreSQL (RLS + enums) |
-| Infra    | AWS (Amplify, Lambda, RDS), GitHub Actions CI/CD |
-
----
-
-## 🚀 Quick Start
-```bash
-# 1. Clone
-git clone https://github.com/MyMetricHealth/my-metric-health.git
-cd my-metric-health
-
-# 2. Install dependencies
-pnpm install    # or yarn / npm
-
-# 3. Environment
-cp .env.example .env   # fill in secrets
-
-# 4. Run services
-pnpm dev              # starts web + API (concurrently)
-expo start            # mobile app (if using Expo)
