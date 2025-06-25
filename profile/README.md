@@ -1,12 +1,45 @@
-## Hi there 👋
+> **⚠️ Heads-up:**  
+> This README was auto-generated with AI and serves as a **temporary placeholder**.  
+> Expect significant updates once our full documentation is ready.
 
-<!--
+# My Metric Health
 
-**Here are some ideas to get you started:**
+Welcome to the **My Metric Health** codebase.  
+Our mission is to help clinics, clinicians, and patients manage care more efficiently with secure, real-time data and AI-powered insights.
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+---
+
+## ✨ Key Features
+| Area | Highlights |
+|------|------------|
+| **Mobile App** | • Symptom & assessment reminders<br>• Push notifications for assigned tasks |
+| **Web Portal** | • Multi-clinic & multi-clinician support<br>• Granular roles: Admin · Member · LimitedClinician · DataViewer<br>• De-identified analytics view |
+| **Security** | • HIPAA-oriented architecture<br>• PHI encrypted at rest & in transit |
+| **AI / Automation** | • Personalized task schedules<br>• Productivity tooling with Cursor & CI workflows |
+
+---
+
+## 🛠 Tech Stack
+| Layer | Tech |
+|-------|------|
+| Frontend | React + TypeScript, Tailwind, Expo (mobile) |
+| Backend  | Node.js (Express), PostgreSQL (RLS + enums) |
+| Infra    | AWS (Amplify, Lambda, RDS), GitHub Actions CI/CD |
+
+---
+
+## 🚀 Quick Start
+```bash
+# 1. Clone
+git clone https://github.com/MyMetricHealth/my-metric-health.git
+cd my-metric-health
+
+# 2. Install dependencies
+pnpm install    # or yarn / npm
+
+# 3. Environment
+cp .env.example .env   # fill in secrets
+
+# 4. Run services
+pnpm dev              # starts web + API (concurrently)
+expo start            # mobile app (if using Expo)
